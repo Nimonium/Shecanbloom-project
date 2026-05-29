@@ -48,7 +48,7 @@ export function DonationCards() {
 
       <div className="flex flex-col sm:flex-row gap-3 rounded-2xl bg-pink-soft/50 p-3">
         <div className="relative flex-1">
-          <span className="absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground">$</span>
+          <span className="absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground">₹</span>
           <input
             type="number"
             inputMode="decimal"
