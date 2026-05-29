@@ -4,9 +4,9 @@ import { Heart } from "lucide-react";
 import { toast } from "sonner";
 
 const tiers = [
-  { amount: 25, title: "$25", desc: "Provides school supplies for one girl for a full year." },
-  { amount: 50, title: "$50", desc: "Covers medical screenings for three women in rural areas.", popular: true },
-  { amount: 100, title: "$100", desc: "Funds a micro-business startup kit for a female entrepreneur." },
+  { amount: 500, title: "₹500", desc: "Provides school supplies for one girl for a full year." },
+  { amount: 1500, title: "₹1,500", desc: "Covers medical screenings for three women in rural areas.", popular: true },
+  { amount: 5000, title: "₹5,000", desc: "Funds a micro-business startup kit for a female entrepreneur." },
 ];
 
 export function DonationCards() {
