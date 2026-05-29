@@ -23,7 +23,6 @@ export function DonationCards() {
     <div className="space-y-6">
       <div className="grid gap-4 md:grid-cols-3">
 
-      <div className="grid gap-4 md:grid-cols-3">
         {tiers.map((t) => {
           const active = selected === t.amount && !custom;
           return (
