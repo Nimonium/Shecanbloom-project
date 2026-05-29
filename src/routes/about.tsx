@@ -4,6 +4,7 @@ import { Target, Eye, Heart, GraduationCap, ShieldCheck, Briefcase, Users, Downl
 import { PageShell } from "@/components/site/PageShell";
 import { Reveal } from "@/components/site/Reveal";
 import storyImg from "@/assets/about-story.jpg";
+import certificateImg from "@/assets/certificate.png";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -168,20 +169,26 @@ function AboutPage() {
             <p className="mt-4 text-white/70 max-w-2xl mx-auto">We are proud to be a registered non-profit organization, ensuring every donation and action is used for the highest possible impact.</p>
           </Reveal>
           <Reveal delay={0.2}>
-            <div className="mt-12 relative mx-auto max-w-2xl rounded-3xl glass-dark p-8 shadow-glow">
-              <div className="rounded-2xl border border-white/20 p-8 bg-white/5">
-                <BadgeCheck className="h-12 w-12 mx-auto text-accent" />
-                <h3 className="mt-4 font-display text-2xl font-bold">Certificate of Registration</h3>
-                <p className="mt-2 text-sm text-white/70">She Can Foundation • Society Act 1860 • 80G Tax Exempt • FCRA Compliant</p>
-                <div className="mt-6 grid grid-cols-3 gap-4 text-xs">
-                  <div className="rounded-xl bg-white/5 p-3"><div className="text-white/60">Registered</div><div className="font-semibold mt-1">2019</div></div>
-                  <div className="rounded-xl bg-white/5 p-3"><div className="text-white/60">80G</div><div className="font-semibold mt-1">Eligible</div></div>
-                  <div className="rounded-xl bg-white/5 p-3"><div className="text-white/60">FCRA</div><div className="font-semibold mt-1">Verified</div></div>
-                </div>
+            <div className="mt-12 relative mx-auto max-w-3xl rounded-3xl glass-dark p-4 sm:p-6 shadow-glow">
+              <div className="flex items-center justify-center gap-2 mb-4 text-accent">
+                <BadgeCheck className="h-5 w-5" />
+                <span className="text-xs uppercase tracking-widest font-semibold">Verified Registration</span>
               </div>
-              <button className="mt-6 inline-flex items-center gap-2 rounded-full bg-gradient-warm px-6 py-3 text-sm font-semibold shadow-soft hover:shadow-glow hover:-translate-y-0.5 transition-all">
+              <div className="rounded-2xl overflow-hidden bg-white">
+                <img
+                  src={certificateImg}
+                  alt="She Can Foundation's Society Registration Certificate issued under Indian Society Act XXI of 1860"
+                  loading="lazy"
+                  className="w-full h-auto block"
+                />
+              </div>
+              <a
+                href={certificateImg}
+                download="She-Can-Foundation-Registration-Certificate.png"
+                className="mt-6 inline-flex items-center gap-2 rounded-full bg-gradient-warm px-6 py-3 text-sm font-semibold shadow-soft hover:shadow-glow hover:-translate-y-0.5 transition-all"
+              >
                 <Download className="h-4 w-4" /> Download Certificate
-              </button>
+              </a>
             </div>
           </Reveal>
         </div>
