@@ -110,6 +110,7 @@ function ContactPage() {
                 </div>
               </div>
             </div>
+          </Reveal>
         </div>
       </section>
 
