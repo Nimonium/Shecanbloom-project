@@ -10,9 +10,6 @@ const tiers = [
 ];
 
 export function DonationCards() {
-  const [selected, setSelected] = useState<number>(50);
-  const [custom, setCustom] = useState<string>("");
-
   const [selected, setSelected] = useState<number>(1500);
   const [custom, setCustom] = useState<string>("");
 
@@ -21,7 +18,11 @@ export function DonationCards() {
     if (!amt || amt <= 0) return toast.error("Please choose a valid amount");
     toast.success(`Thank you for your ₹${amt} pledge! 💖`);
   };
+
+  return (
     <div className="space-y-6">
+      <div className="grid gap-4 md:grid-cols-3">
+
       <div className="grid gap-4 md:grid-cols-3">
         {tiers.map((t) => {
           const active = selected === t.amount && !custom;
