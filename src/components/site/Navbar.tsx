@@ -32,9 +32,7 @@ export function Navbar() {
     >
       <nav className="mx-auto max-w-7xl px-6 lg:px-10 h-16 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2 font-display font-semibold text-lg">
-          <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-gradient-warm text-white shadow-soft">
-            <Heart className="h-4 w-4" fill="currentColor" />
-          </span>
+          <img src={logo} alt="She Can Foundation" className="h-10 w-10 rounded-full object-cover shadow-soft" />
           <span className="gradient-text">She Can Foundation</span>
         </Link>
 
