@@ -4,24 +4,25 @@ import { Heart } from "lucide-react";
 import { toast } from "sonner";
 
 const tiers = [
-  { amount: 25, title: "$25", desc: "Provides school supplies for one girl for a full year." },
-  { amount: 50, title: "$50", desc: "Covers medical screenings for three women in rural areas.", popular: true },
-  { amount: 100, title: "$100", desc: "Funds a micro-business startup kit for a female entrepreneur." },
+  { amount: 500, title: "₹500", desc: "Provides school supplies for one girl for a full year." },
+  { amount: 1500, title: "₹1,500", desc: "Covers medical screenings for three women in rural areas.", popular: true },
+  { amount: 5000, title: "₹5,000", desc: "Funds a micro-business startup kit for a female entrepreneur." },
 ];
 
 export function DonationCards() {
-  const [selected, setSelected] = useState<number>(50);
+  const [selected, setSelected] = useState<number>(1500);
   const [custom, setCustom] = useState<string>("");
 
   const onDonate = () => {
     const amt = custom ? Number(custom) : selected;
     if (!amt || amt <= 0) return toast.error("Please choose a valid amount");
-    toast.success(`Thank you for your $${amt} pledge! 💖`);
+    toast.success(`Thank you for your ₹${amt} pledge! 💖`);
   };
 
   return (
     <div className="space-y-6">
       <div className="grid gap-4 md:grid-cols-3">
+
         {tiers.map((t) => {
           const active = selected === t.amount && !custom;
           return (
@@ -47,7 +48,7 @@ export function DonationCards() {
 
       <div className="flex flex-col sm:flex-row gap-3 rounded-2xl bg-pink-soft/50 p-3">
         <div className="relative flex-1">
-          <span className="absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground">$</span>
+          <span className="absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground">₹</span>
           <input
             type="number"
             inputMode="decimal"
