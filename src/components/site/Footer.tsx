@@ -8,9 +8,7 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-6 lg:px-10 py-16 grid gap-12 md:grid-cols-2 lg:grid-cols-4">
         <div>
           <div className="flex items-center gap-2 font-display font-semibold text-lg">
-            <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-gradient-warm text-white">
-              <Heart className="h-4 w-4" fill="currentColor" />
-            </span>
+            <img src={logo} alt="She Can Foundation" className="h-9 w-9 rounded-full object-cover shadow-soft" />
             <span className="gradient-text">She Can Foundation</span>
           </div>
           <p className="mt-4 text-sm text-muted-foreground leading-relaxed">
