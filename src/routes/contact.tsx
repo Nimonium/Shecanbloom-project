@@ -8,6 +8,7 @@ import { PageShell } from "@/components/site/PageShell";
 import { Reveal } from "@/components/site/Reveal";
 import contactImg from "@/assets/contact-illustration.jpg";
 import donateImg from "@/assets/donate-woman.jpg";
+import donateQr from "@/assets/donate-qr.png";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -84,7 +85,7 @@ function ContactPage() {
       <section className="py-12">
         <div className="mx-auto max-w-6xl px-6 lg:px-10">
           <Reveal>
-            <div className="grid md:grid-cols-[1.3fr_1fr] gap-8 rounded-3xl bg-pink-soft/40 p-8 md:p-10 shadow-soft">
+            <div className="grid md:grid-cols-[1.2fr_1fr_0.9fr] gap-8 rounded-3xl bg-pink-soft/40 p-8 md:p-10 shadow-soft items-center">
               <div>
                 <h2 className="text-3xl md:text-4xl font-display font-bold text-primary">Donate Now</h2>
                 <p className="mt-4 text-sm text-foreground/80 leading-relaxed">
@@ -101,8 +102,14 @@ function ContactPage() {
                 <div className="absolute -inset-3 rounded-3xl bg-gradient-warm opacity-15 blur-2xl" />
                 <img src={donateImg} alt="Community helper" loading="lazy" width={900} height={1000} className="relative rounded-3xl shadow-glow w-full h-80 object-cover" />
               </div>
+              <div className="relative flex flex-col items-center">
+                <div className="absolute -inset-3 rounded-3xl bg-gradient-warm opacity-10 blur-2xl" />
+                <div className="relative rounded-3xl bg-white p-4 shadow-glow w-full">
+                  <img src={donateQr} alt="Razorpay UPI QR code to donate to She Can Foundation" loading="lazy" className="w-full h-auto rounded-2xl" />
+                  <p className="mt-3 text-center text-xs font-semibold uppercase tracking-wider text-primary">Scan to donate via UPI</p>
+                </div>
+              </div>
             </div>
-          </Reveal>
         </div>
       </section>
 
